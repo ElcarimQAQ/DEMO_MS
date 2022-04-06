@@ -1,2 +1,2 @@
-hello
+hello:pub_sub
 -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCATKIN_DEVEL_PREFIX=/home/bingda/demo_ms/devel -DCMAKE_INSTALL_PREFIX=/home/bingda/demo_ms/install -G Unix Makefiles

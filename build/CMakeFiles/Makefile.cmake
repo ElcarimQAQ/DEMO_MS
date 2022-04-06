@@ -15,10 +15,14 @@ set(CMAKE_MAKEFILE_DEPENDS
   "catkin_generated/order_packages.cmake"
   "hello/catkin_generated/ordered_paths.cmake"
   "hello/catkin_generated/package.cmake"
+  "pub_sub/catkin_generated/ordered_paths.cmake"
+  "pub_sub/catkin_generated/package.cmake"
   "/home/bingda/demo_ms/src/CMakeLists.txt"
   "/home/bingda/demo_ms/src/hello/CMakeLists.txt"
   "/home/bingda/demo_ms/src/hello/package.xml"
   "/home/bingda/demo_ms/src/hello/scripts/hello_p.py"
+  "/home/bingda/demo_ms/src/pub_sub/CMakeLists.txt"
+  "/home/bingda/demo_ms/src/pub_sub/package.xml"
   "/opt/ros/melodic/share/catkin/cmake/../package.xml"
   "/opt/ros/melodic/share/catkin/cmake/all.cmake"
   "/opt/ros/melodic/share/catkin/cmake/assert.cmake"
@@ -176,6 +180,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "gtest/googlemock/CMakeFiles/CMakeDirectoryInformation.cmake"
   "gtest/googlemock/gtest/CMakeFiles/CMakeDirectoryInformation.cmake"
   "hello/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "pub_sub/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -205,4 +210,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "hello/CMakeFiles/std_msgs_generate_messages_nodejs.dir/DependInfo.cmake"
   "hello/CMakeFiles/roscpp_generate_messages_nodejs.dir/DependInfo.cmake"
   "hello/CMakeFiles/std_msgs_generate_messages_py.dir/DependInfo.cmake"
+  "pub_sub/CMakeFiles/pub01.dir/DependInfo.cmake"
   )

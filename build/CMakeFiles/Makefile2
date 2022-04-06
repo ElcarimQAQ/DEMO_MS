@@ -955,6 +955,61 @@ clean: hello/CMakeFiles/std_msgs_generate_messages_py.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Directory level rules for directory pub_sub
+
+# Convenience name for "all" pass in the directory.
+pub_sub/all: pub_sub/CMakeFiles/pub01.dir/all
+
+.PHONY : pub_sub/all
+
+# Convenience name for "clean" pass in the directory.
+pub_sub/clean: pub_sub/CMakeFiles/pub01.dir/clean
+
+.PHONY : pub_sub/clean
+
+# Convenience name for "preinstall" pass in the directory.
+pub_sub/preinstall:
+
+.PHONY : pub_sub/preinstall
+
+#=============================================================================
+# Target rules for target pub_sub/CMakeFiles/pub01.dir
+
+# All Build rule for target.
+pub_sub/CMakeFiles/pub01.dir/all:
+	$(MAKE) -f pub_sub/CMakeFiles/pub01.dir/build.make pub_sub/CMakeFiles/pub01.dir/depend
+	$(MAKE) -f pub_sub/CMakeFiles/pub01.dir/build.make pub_sub/CMakeFiles/pub01.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bingda/demo_ms/build/CMakeFiles --progress-num=14,15 "Built target pub01"
+.PHONY : pub_sub/CMakeFiles/pub01.dir/all
+
+# Include target in all.
+all: pub_sub/CMakeFiles/pub01.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+pub_sub/CMakeFiles/pub01.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bingda/demo_ms/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 pub_sub/CMakeFiles/pub01.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bingda/demo_ms/build/CMakeFiles 0
+.PHONY : pub_sub/CMakeFiles/pub01.dir/rule
+
+# Convenience name for target.
+pub01: pub_sub/CMakeFiles/pub01.dir/rule
+
+.PHONY : pub01
+
+# clean rule for target.
+pub_sub/CMakeFiles/pub01.dir/clean:
+	$(MAKE) -f pub_sub/CMakeFiles/pub01.dir/build.make pub_sub/CMakeFiles/pub01.dir/clean
+.PHONY : pub_sub/CMakeFiles/pub01.dir/clean
+
+# clean rule for target.
+clean: pub_sub/CMakeFiles/pub01.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Special targets to cleanup operation of make.
 
 # Special rule to run CMake to check the build system integrity.

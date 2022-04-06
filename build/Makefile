@@ -492,6 +492,19 @@ std_msgs_generate_messages_py/fast:
 	$(MAKE) -f hello/CMakeFiles/std_msgs_generate_messages_py.dir/build.make hello/CMakeFiles/std_msgs_generate_messages_py.dir/build
 .PHONY : std_msgs_generate_messages_py/fast
 
+#=============================================================================
+# Target rules for targets named pub01
+
+# Build rule for target.
+pub01: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pub01
+.PHONY : pub01
+
+# fast build rule for target.
+pub01/fast:
+	$(MAKE) -f pub_sub/CMakeFiles/pub01.dir/build.make pub_sub/CMakeFiles/pub01.dir/build
+.PHONY : pub01/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -530,6 +543,7 @@ help:
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_py"
+	@echo "... pub01"
 .PHONY : help
 
 
