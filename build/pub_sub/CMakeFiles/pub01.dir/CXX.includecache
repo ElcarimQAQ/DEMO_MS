@@ -11,6 +11,8 @@ ros/ros.h
 /home/bingda/demo_ms/src/pub_sub/src/ros/ros.h
 std_msgs/String.h
 /home/bingda/demo_ms/src/pub_sub/src/std_msgs/String.h
+sstream
+-
 
 /opt/ros/melodic/include/ros/advertise_options.h
 ros/forwards.h
