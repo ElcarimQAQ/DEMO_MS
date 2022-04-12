@@ -4,7 +4,9 @@
 
 int main(int argc, char *argv[])
 {
+    //初始化 ROS 节点:命名(唯一)
     ros::init(argc, argv, "Gouzi");
+    //实例化 ROS 句柄
     ros::NodeHandle nh;
     ros::Publisher pub = nh.advertise<std_msgs::String>("fang",10);
     std_msgs::String msg;
@@ -20,6 +22,7 @@ int main(int argc, char *argv[])
         pub.publish(msg);
 
         rate.sleep();
+        ros::spinOnce(); 
     }
     
     return 0;

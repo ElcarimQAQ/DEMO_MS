@@ -59,10 +59,11 @@
 /home/bingda/demo_ms/build/hello/CMakeFiles/roscpp_generate_messages_nodejs.dir
 /home/bingda/demo_ms/build/hello/CMakeFiles/std_msgs_generate_messages_py.dir
 /home/bingda/demo_ms/build/pub_sub/CMakeFiles/install/strip.dir
+/home/bingda/demo_ms/build/pub_sub/CMakeFiles/install.dir
+/home/bingda/demo_ms/build/pub_sub/CMakeFiles/sub01.dir
+/home/bingda/demo_ms/build/pub_sub/CMakeFiles/pub01.dir
+/home/bingda/demo_ms/build/pub_sub/CMakeFiles/edit_cache.dir
 /home/bingda/demo_ms/build/pub_sub/CMakeFiles/install/local.dir
 /home/bingda/demo_ms/build/pub_sub/CMakeFiles/test.dir
 /home/bingda/demo_ms/build/pub_sub/CMakeFiles/list_install_components.dir
-/home/bingda/demo_ms/build/pub_sub/CMakeFiles/pub01.dir
-/home/bingda/demo_ms/build/pub_sub/CMakeFiles/edit_cache.dir
 /home/bingda/demo_ms/build/pub_sub/CMakeFiles/rebuild_cache.dir
-/home/bingda/demo_ms/build/pub_sub/CMakeFiles/install.dir

@@ -210,5 +210,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "hello/CMakeFiles/std_msgs_generate_messages_nodejs.dir/DependInfo.cmake"
   "hello/CMakeFiles/roscpp_generate_messages_nodejs.dir/DependInfo.cmake"
   "hello/CMakeFiles/std_msgs_generate_messages_py.dir/DependInfo.cmake"
+  "pub_sub/CMakeFiles/sub01.dir/DependInfo.cmake"
   "pub_sub/CMakeFiles/pub01.dir/DependInfo.cmake"
   )

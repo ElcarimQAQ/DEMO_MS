@@ -493,6 +493,19 @@ std_msgs_generate_messages_py/fast:
 .PHONY : std_msgs_generate_messages_py/fast
 
 #=============================================================================
+# Target rules for targets named sub01
+
+# Build rule for target.
+sub01: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 sub01
+.PHONY : sub01
+
+# fast build rule for target.
+sub01/fast:
+	$(MAKE) -f pub_sub/CMakeFiles/sub01.dir/build.make pub_sub/CMakeFiles/sub01.dir/build
+.PHONY : sub01/fast
+
+#=============================================================================
 # Target rules for targets named pub01
 
 # Build rule for target.
@@ -543,6 +556,7 @@ help:
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_py"
+	@echo "... sub01"
 	@echo "... pub01"
 .PHONY : help
 

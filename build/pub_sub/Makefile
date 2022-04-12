@@ -68,6 +68,29 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -101,17 +124,6 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -122,18 +134,6 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -166,6 +166,21 @@ preinstall/fast:
 depend:
 	cd /home/bingda/demo_ms/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+# Convenience name for target.
+pub_sub/CMakeFiles/sub01.dir/rule:
+	cd /home/bingda/demo_ms/build && $(MAKE) -f CMakeFiles/Makefile2 pub_sub/CMakeFiles/sub01.dir/rule
+.PHONY : pub_sub/CMakeFiles/sub01.dir/rule
+
+# Convenience name for target.
+sub01: pub_sub/CMakeFiles/sub01.dir/rule
+
+.PHONY : sub01
+
+# fast build rule for target.
+sub01/fast:
+	cd /home/bingda/demo_ms/build && $(MAKE) -f pub_sub/CMakeFiles/sub01.dir/build.make pub_sub/CMakeFiles/sub01.dir/build
+.PHONY : sub01/fast
 
 # Convenience name for target.
 pub_sub/CMakeFiles/pub01.dir/rule:
@@ -209,6 +224,33 @@ src/pub01.cpp.s:
 	cd /home/bingda/demo_ms/build && $(MAKE) -f pub_sub/CMakeFiles/pub01.dir/build.make pub_sub/CMakeFiles/pub01.dir/src/pub01.cpp.s
 .PHONY : src/pub01.cpp.s
 
+src/sub01.o: src/sub01.cpp.o
+
+.PHONY : src/sub01.o
+
+# target to build an object file
+src/sub01.cpp.o:
+	cd /home/bingda/demo_ms/build && $(MAKE) -f pub_sub/CMakeFiles/sub01.dir/build.make pub_sub/CMakeFiles/sub01.dir/src/sub01.cpp.o
+.PHONY : src/sub01.cpp.o
+
+src/sub01.i: src/sub01.cpp.i
+
+.PHONY : src/sub01.i
+
+# target to preprocess a source file
+src/sub01.cpp.i:
+	cd /home/bingda/demo_ms/build && $(MAKE) -f pub_sub/CMakeFiles/sub01.dir/build.make pub_sub/CMakeFiles/sub01.dir/src/sub01.cpp.i
+.PHONY : src/sub01.cpp.i
+
+src/sub01.s: src/sub01.cpp.s
+
+.PHONY : src/sub01.s
+
+# target to generate assembly for a file
+src/sub01.cpp.s:
+	cd /home/bingda/demo_ms/build && $(MAKE) -f pub_sub/CMakeFiles/sub01.dir/build.make pub_sub/CMakeFiles/sub01.dir/src/sub01.cpp.s
+.PHONY : src/sub01.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -216,16 +258,20 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
+	@echo "... install"
+	@echo "... sub01"
+	@echo "... pub01"
+	@echo "... edit_cache"
 	@echo "... install/local"
 	@echo "... test"
 	@echo "... list_install_components"
-	@echo "... pub01"
-	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... install"
 	@echo "... src/pub01.o"
 	@echo "... src/pub01.i"
 	@echo "... src/pub01.s"
+	@echo "... src/sub01.o"
+	@echo "... src/sub01.i"
+	@echo "... src/sub01.s"
 .PHONY : help
 
 
