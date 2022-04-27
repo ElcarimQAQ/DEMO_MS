@@ -22,7 +22,8 @@ int main(int argc, char *argv[])
         pub.publish(msg);
 
         rate.sleep();
-        ros::spinOnce(); 
+        //官方建议添加
+        //ros::spinOnce(); 
     }
     
     return 0;
