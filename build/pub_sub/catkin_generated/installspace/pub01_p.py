@@ -1,5 +1,5 @@
+#!/usr/bin/env python2
 # -*- coding: UTF-8 -*-
-#! /usr/bin/env python
 
 #1.导包 
 import rospy

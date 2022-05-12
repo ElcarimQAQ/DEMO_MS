@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/pub01.dir/src/pub01.cpp.o"
-  "/home/bingda/demo_ms/devel/lib/pub_sub/pub01.pdb"
-  "/home/bingda/demo_ms/devel/lib/pub_sub/pub01"
+  "/home/bingda/demo_ws/devel/lib/pub_sub/pub01.pdb"
+  "/home/bingda/demo_ws/devel/lib/pub_sub/pub01"
 )
 
 # Per-language clean rules from dependency scanning.

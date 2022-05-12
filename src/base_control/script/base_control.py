@@ -65,6 +65,7 @@ class queue:
         for i in range(self.capacity):
             print self.array[i],
         print(' ')
+        
 #class BaseControl is design for hardware base relative control
 class BaseControl:
     def __init__(self):
@@ -142,12 +143,8 @@ class BaseControl:
             self.serial.close
             sys.exit(0)
         rospy.loginfo("Serial Open Succeed")
-        #if move base type is ackermann car like robot and use ackermann msg ,sud ackermann topic,else sub cmd_vel topic
-        if(('NanoCar' in base_type) & (self.sub_ackermann == True)):
-            from ackermann_msgs.msg import AckermannDriveStamped
-            self.sub = rospy.Subscriber(self.ackermann_cmd_topic,AckermannDriveStamped,self.ackermannCmdCB,queue_size=20)
-        else:
-            self.sub = rospy.Subscriber(self.cmd_vel_topic,Twist,self.cmdCB,queue_size=20)
+        #sub cmd_vel topic
+        self.sub = rospy.Subscriber(self.cmd_vel_topic,Twist,self.cmdCB,queue_size=20)
         self.pub = rospy.Publisher(self.odom_topic,Odometry,queue_size=10)
         self.battery_pub = rospy.Publisher(self.battery_topic,BatteryState,queue_size=3)
         if self.pub_sonar:
@@ -228,33 +225,7 @@ class BaseControl:
         except:
             rospy.logerr("Vel Command Send Faild")
         self.serialIDLE_flag = 0
-    #Subscribe ackermann Cmd call this to send vel cmd to move base
-    def ackermannCmdCB(self,data):
-        self.speed = data.drive.speed
-        self.steering_angle = data.drive.steering_angle
-        self.last_ackermann_cmd_time = rospy.Time.now()
-        output = chr(0x5a) + chr(12) + chr(0x01) + chr(0x15) + \
-            chr((int(self.speed*1000.0)>>8)&0xff) + chr(int(self.speed*1000.0)&0xff) + \
-            chr(0x00) + chr(0x00) + \
-            chr((int(self.steering_angle*1000.0)>>8)&0xff) + chr(int(self.steering_angle*1000.0)&0xff) + \
-            chr(0x00)
-        outputdata = [0x5a,0x0c,0x01,0x15,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00]
-        outputdata[4] = (int(self.speed*1000.0)>>8)&0xff
-        outputdata[5] = int(self.speed*1000.0)&0xff
-        outputdata[8] = (int(self.steering_angle*1000.0)>>8)&0xff
-        outputdata[9] = int(self.steering_angle*1000.0)&0xff
-        crc_8 = self.crc_byte(outputdata,len(outputdata)-1)
-        output += chr(crc_8)
-        while self.serialIDLE_flag:
-            time.sleep(0.01)
-        self.serialIDLE_flag = 4
-        try:
-            while self.serial.out_waiting:
-                pass
-            self.serial.write(output)
-        except:
-            rospy.logerr("Vel Command Send Faild")
-        self.serialIDLE_flag = 0
+    
     #Communication Timer callback to handle receive data
     #depend on communication protocol
     def timerCommunicationCB(self,event):
@@ -504,16 +475,8 @@ class BaseControl:
             msg.range = self.Sonar[0] / 100.0
         self.range_pub1.publish(msg)
          
-        # TF value calculate from mechanical structure
-        if('NanoRobot' in base_type ):
-            self.tf_broadcaster.sendTransform((0.0, 0.0, 0.0 ),(0.0, 0.0, 0.0, 1.0),self.current_time,'Sonar_1',self.baseId)
-        elif('NanoCar' in base_type):
-            self.tf_broadcaster.sendTransform((0.18, 0.0, 0.0 ),(0.0, 0.0, 0.0, 1.0),self.current_time,'Sonar_1',self.baseId)
-        elif('4WD' in base_type):
-            self.tf_broadcaster.sendTransform((0.0, 0.0, 0.0 ),(0.0, 0.0, 0.0, 1.0),self.current_time,'Sonar_1',self.baseId)
-        elif('Race182' in base_type):
-            self.tf_broadcaster.sendTransform((0.18, 0.0, 0.0 ),(0.0, 0.0, 0.0, 1.0),self.current_time,'Sonar_1',self.baseId)   
-        elif('NanoOmni' in base_type):
+        # TF value calculate from mechanical structure  
+        if('NanoOmni' in base_type):
             self.tf_broadcaster.sendTransform((0.11, 0.0, 0.0 ),(0.0, 0.0, 0.0, 1.0),self.current_time,'Sonar_1',self.baseId)              
         else:
             pass
@@ -527,15 +490,7 @@ class BaseControl:
             msg.header.frame_id = 'Sonar_2'
             self.range_pub2.publish(msg)
             
-            if('NanoRobot' in base_type):
-                self.tf_broadcaster.sendTransform((0.0, 0.0 ,0.0 ),(0.0,0.0,-1.0,0),self.current_time,'Sonar_2',self.baseId) 
-            elif('NanoCar' in base_type):
-                self.tf_broadcaster.sendTransform((-0.035, 0.0 ,0.0 ),(0.0,0.0,-1.0,0),self.current_time,'Sonar_2',self.baseId) 
-            elif('4WD' in base_type):
-                self.tf_broadcaster.sendTransform((0.0, 0.0 ,0.0 ),(0.0,0.0,-1.0,0),self.current_time,'Sonar_2',self.baseId) 
-            elif('Race182' in base_type):
-                self.tf_broadcaster.sendTransform((-0.08, 0.0 ,0.0 ),(0.0,0.0,-1.0,0),self.current_time,'Sonar_2',self.baseId)     
-            elif('NanoOmni' in base_type):
+            if('NanoOmni' in base_type):
                 self.tf_broadcaster.sendTransform((-0.11, 0.0, 0.0 ),(0.0, 0.0, -1.0, 0.0),self.current_time,'Sonar_2',self.baseId)  
             else:
                 pass
@@ -547,10 +502,7 @@ class BaseControl:
             else:
                 msg.range = self.Sonar[2] / 100.0
             self.range_pub3.publish(msg)
-            if('Race182' in base_type):
-                self.tf_broadcaster.sendTransform((0.0, 0.06 ,0.0 ),(0.0,0.0,0.707,0.707),self.current_time,'Sonar_3',self.baseId) 
-            elif('NanoOmni' in base_type):   
-                self.tf_broadcaster.sendTransform((0.0, 0.07 ,0.0 ),(0.0,0.0,0.707,0.707),self.current_time,'Sonar_3',self.baseId)          
+            self.tf_broadcaster.sendTransform((0.0, 0.07 ,0.0 ),(0.0,0.0,0.707,0.707),self.current_time,'Sonar_3',self.baseId)          
         if sonar_num > 3:   
         # Sonar 4
             if self.Sonar[3] == 0xff:
@@ -559,9 +511,7 @@ class BaseControl:
                 msg.range = self.Sonar[3] / 100.0
             msg.header.frame_id = 'Sonar_4'
             self.range_pub4.publish(msg)
-            if('Race182' in base_type):
-                self.tf_broadcaster.sendTransform((0.0, -0.06 ,0.0 ),(0.0,0.0,-0.707,0.707),self.current_time,'Sonar_4',self.baseId) 
-            elif('NanoOmni' in base_type):
+            if('NanoOmni' in base_type):
                 self.tf_broadcaster.sendTransform((0.0, -0.07 ,0.0 ),(0.0,0.0,-0.707,0.707),self.current_time,'Sonar_4',self.baseId) 
     #IMU Timer callback function to get raw imu info
     def timerIMUCB(self,event):
