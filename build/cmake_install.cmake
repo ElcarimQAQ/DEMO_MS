@@ -131,9 +131,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/bingda/demo_ws/build/gtest/cmake_install.cmake")
-  include("/home/bingda/demo_ws/build/base_control/cmake_install.cmake")
-  include("/home/bingda/demo_ws/build/hello/cmake_install.cmake")
-  include("/home/bingda/demo_ws/build/pub_sub/cmake_install.cmake")
+  include("/home/bingda/demo_ws/build/astrapro_launch/cmake_install.cmake")
 
 endif()
 

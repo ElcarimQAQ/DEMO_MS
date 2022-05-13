@@ -1,2 +1,2 @@
-base_control:hello:pub_sub
--DCATKIN_DEVEL_PREFIX=/home/bingda/demo_ws/devel -DCMAKE_INSTALL_PREFIX=/home/bingda/demo_ws/install -G Unix Makefiles
+astrapro_launch:base_control:hello:pub_sub:robot_navigation:robot_vslam
+-DCATKIN_WHITELIST_PACKAGES=astrapro_launch -DCATKIN_DEVEL_PREFIX=/home/bingda/demo_ws/devel -DCMAKE_INSTALL_PREFIX=/home/bingda/demo_ws/install -G Unix Makefiles

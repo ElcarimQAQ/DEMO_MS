@@ -78,8 +78,7 @@ class BaseControl:
         self.odom_topic = rospy.get_param('~odom_topic','/odom')
         self.battery_topic = rospy.get_param('~battery_topic','battery')
         self.battery_freq = float(rospy.get_param('~battery_freq','1'))
-        self.cmd_vel_topic= rospy.get_param('~cmd_vel_topic','/cmd_vel')
-        self.ackermann_cmd_topic = rospy.get_param('~ackermann_cmd_topic','/ackermann_cmd_topic')
+        self.cmd_vel_topic= rospy.get_param('~cmd_vel_topic','/cmd_vel')   
 
         self.pub_imu = bool(rospy.get_param('~pub_imu',False))
         if(self.pub_imu == True):
@@ -90,8 +89,7 @@ class BaseControl:
                 self.imu_freq = 100
 
         self.pub_sonar = bool(rospy.get_param('~pub_sonar',False))
-        self.sub_ackermann = bool(rospy.get_param('~sub_ackermann',False))
-
+   
 
         #define param
         self.current_time = rospy.Time.now()
