@@ -18,10 +18,7 @@ from sensor_msgs.msg import Range
 import ctypes
 
 base_type = os.getenv('BASE_TYPE')
-if os.getenv('SONAR_NUM') is None:
-    sonar_num = 0
-else:
-    sonar_num = int(os.getenv('SONAR_NUM')) 
+sonar_num = int(os.getenv('SONAR_NUM')) 
 
 
 #class queue is design for uart receive data cache
@@ -63,10 +60,11 @@ class queue:
 
     def show_queue(self):
         for i in range(self.capacity):
-            print self.array[i],
+            print 
+            self.array[i],
         print(' ')
         
-#class BaseControl is design for hardware base relative control
+#hardware base relative control
 class BaseControl:
     def __init__(self):
         #Get params
