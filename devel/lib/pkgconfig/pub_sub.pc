@@ -1,4 +1,4 @@
-prefix=/home/bingda/demo_ms/devel
+prefix=/home/bingda/demo_ws/devel
 
 Name: pub_sub
 Description: Description of pub_sub

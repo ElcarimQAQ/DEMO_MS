@@ -1,4 +1,4 @@
-prefix=/home/bingda/demo_ms/devel
+prefix=/home/bingda/demo_ws/devel
 
 Name: base_control
 Description: Description of base_control

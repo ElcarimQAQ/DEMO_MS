@@ -141,7 +141,6 @@ class BaseControl:
             self.serial.close
             sys.exit(0)
         rospy.loginfo("Serial Open Succeed")
-        
         #sub cmd_vel topic
         self.sub = rospy.Subscriber(self.cmd_vel_topic,Twist,self.cmdCB,queue_size=20)
         self.pub = rospy.Publisher(self.odom_topic,Odometry,queue_size=10)

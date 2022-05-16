@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bingda/demo_ms/src
+CMAKE_SOURCE_DIR = /home/bingda/demo_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bingda/demo_ms/build
+CMAKE_BINARY_DIR = /home/bingda/demo_ws/build
 
 # Utility rule file for roscpp_generate_messages_lisp.
 
@@ -63,10 +63,10 @@ hello/CMakeFiles/roscpp_generate_messages_lisp.dir/build: roscpp_generate_messag
 .PHONY : hello/CMakeFiles/roscpp_generate_messages_lisp.dir/build
 
 hello/CMakeFiles/roscpp_generate_messages_lisp.dir/clean:
-	cd /home/bingda/demo_ms/build/hello && $(CMAKE_COMMAND) -P CMakeFiles/roscpp_generate_messages_lisp.dir/cmake_clean.cmake
+	cd /home/bingda/demo_ws/build/hello && $(CMAKE_COMMAND) -P CMakeFiles/roscpp_generate_messages_lisp.dir/cmake_clean.cmake
 .PHONY : hello/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
 
 hello/CMakeFiles/roscpp_generate_messages_lisp.dir/depend:
-	cd /home/bingda/demo_ms/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bingda/demo_ms/src /home/bingda/demo_ms/src/hello /home/bingda/demo_ms/build /home/bingda/demo_ms/build/hello /home/bingda/demo_ms/build/hello/CMakeFiles/roscpp_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/bingda/demo_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bingda/demo_ws/src /home/bingda/demo_ws/src/hello /home/bingda/demo_ws/build /home/bingda/demo_ws/build/hello /home/bingda/demo_ws/build/hello/CMakeFiles/roscpp_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : hello/CMakeFiles/roscpp_generate_messages_lisp.dir/depend
 

@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/bingda/demo_ms/src/pub_sub/src/pub01.cpp
+/home/bingda/demo_ws/src/pub_sub/src/pub01.cpp
 ros/ros.h
-/home/bingda/demo_ms/src/pub_sub/src/ros/ros.h
+/home/bingda/demo_ws/src/pub_sub/src/ros/ros.h
 std_msgs/String.h
-/home/bingda/demo_ms/src/pub_sub/src/std_msgs/String.h
+/home/bingda/demo_ws/src/pub_sub/src/std_msgs/String.h
 sstream
 -
 

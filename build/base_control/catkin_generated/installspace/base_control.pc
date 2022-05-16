@@ -1,4 +1,4 @@
-prefix=/home/bingda/demo_ms/install
+prefix=/home/bingda/demo_ws/install
 
 Name: base_control
 Description: Description of base_control
