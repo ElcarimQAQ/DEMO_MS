@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bingda/demo_ws/src
+CMAKE_SOURCE_DIR = /home/bingda/demo_ms/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bingda/demo_ws/build
+CMAKE_BINARY_DIR = /home/bingda/demo_ms/build
 
 # Include any dependencies generated for this target.
 include hello/CMakeFiles/hello_c.dir/depend.make
@@ -58,17 +58,17 @@ include hello/CMakeFiles/hello_c.dir/progress.make
 include hello/CMakeFiles/hello_c.dir/flags.make
 
 hello/CMakeFiles/hello_c.dir/src/hello_c.cpp.o: hello/CMakeFiles/hello_c.dir/flags.make
-hello/CMakeFiles/hello_c.dir/src/hello_c.cpp.o: /home/bingda/demo_ws/src/hello/src/hello_c.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bingda/demo_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object hello/CMakeFiles/hello_c.dir/src/hello_c.cpp.o"
-	cd /home/bingda/demo_ws/build/hello && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hello_c.dir/src/hello_c.cpp.o -c /home/bingda/demo_ws/src/hello/src/hello_c.cpp
+hello/CMakeFiles/hello_c.dir/src/hello_c.cpp.o: /home/bingda/demo_ms/src/hello/src/hello_c.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bingda/demo_ms/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object hello/CMakeFiles/hello_c.dir/src/hello_c.cpp.o"
+	cd /home/bingda/demo_ms/build/hello && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hello_c.dir/src/hello_c.cpp.o -c /home/bingda/demo_ms/src/hello/src/hello_c.cpp
 
 hello/CMakeFiles/hello_c.dir/src/hello_c.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hello_c.dir/src/hello_c.cpp.i"
-	cd /home/bingda/demo_ws/build/hello && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bingda/demo_ws/src/hello/src/hello_c.cpp > CMakeFiles/hello_c.dir/src/hello_c.cpp.i
+	cd /home/bingda/demo_ms/build/hello && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bingda/demo_ms/src/hello/src/hello_c.cpp > CMakeFiles/hello_c.dir/src/hello_c.cpp.i
 
 hello/CMakeFiles/hello_c.dir/src/hello_c.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hello_c.dir/src/hello_c.cpp.s"
-	cd /home/bingda/demo_ws/build/hello && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bingda/demo_ws/src/hello/src/hello_c.cpp -o CMakeFiles/hello_c.dir/src/hello_c.cpp.s
+	cd /home/bingda/demo_ms/build/hello && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bingda/demo_ms/src/hello/src/hello_c.cpp -o CMakeFiles/hello_c.dir/src/hello_c.cpp.s
 
 hello/CMakeFiles/hello_c.dir/src/hello_c.cpp.o.requires:
 
@@ -88,32 +88,32 @@ hello_c_OBJECTS = \
 # External object files for target hello_c
 hello_c_EXTERNAL_OBJECTS =
 
-/home/bingda/demo_ws/devel/lib/hello/hello_c: hello/CMakeFiles/hello_c.dir/src/hello_c.cpp.o
-/home/bingda/demo_ws/devel/lib/hello/hello_c: hello/CMakeFiles/hello_c.dir/build.make
-/home/bingda/demo_ws/devel/lib/hello/hello_c: /opt/ros/melodic/lib/libroscpp.so
-/home/bingda/demo_ws/devel/lib/hello/hello_c: /usr/lib/aarch64-linux-gnu/libboost_filesystem.so
-/home/bingda/demo_ws/devel/lib/hello/hello_c: /opt/ros/melodic/lib/librosconsole.so
-/home/bingda/demo_ws/devel/lib/hello/hello_c: /opt/ros/melodic/lib/librosconsole_log4cxx.so
-/home/bingda/demo_ws/devel/lib/hello/hello_c: /opt/ros/melodic/lib/librosconsole_backend_interface.so
-/home/bingda/demo_ws/devel/lib/hello/hello_c: /usr/lib/aarch64-linux-gnu/liblog4cxx.so
-/home/bingda/demo_ws/devel/lib/hello/hello_c: /usr/lib/aarch64-linux-gnu/libboost_regex.so
-/home/bingda/demo_ws/devel/lib/hello/hello_c: /opt/ros/melodic/lib/libxmlrpcpp.so
-/home/bingda/demo_ws/devel/lib/hello/hello_c: /opt/ros/melodic/lib/libroscpp_serialization.so
-/home/bingda/demo_ws/devel/lib/hello/hello_c: /opt/ros/melodic/lib/librostime.so
-/home/bingda/demo_ws/devel/lib/hello/hello_c: /opt/ros/melodic/lib/libcpp_common.so
-/home/bingda/demo_ws/devel/lib/hello/hello_c: /usr/lib/aarch64-linux-gnu/libboost_system.so
-/home/bingda/demo_ws/devel/lib/hello/hello_c: /usr/lib/aarch64-linux-gnu/libboost_thread.so
-/home/bingda/demo_ws/devel/lib/hello/hello_c: /usr/lib/aarch64-linux-gnu/libboost_chrono.so
-/home/bingda/demo_ws/devel/lib/hello/hello_c: /usr/lib/aarch64-linux-gnu/libboost_date_time.so
-/home/bingda/demo_ws/devel/lib/hello/hello_c: /usr/lib/aarch64-linux-gnu/libboost_atomic.so
-/home/bingda/demo_ws/devel/lib/hello/hello_c: /usr/lib/aarch64-linux-gnu/libpthread.so
-/home/bingda/demo_ws/devel/lib/hello/hello_c: /usr/lib/aarch64-linux-gnu/libconsole_bridge.so.0.4
-/home/bingda/demo_ws/devel/lib/hello/hello_c: hello/CMakeFiles/hello_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bingda/demo_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/bingda/demo_ws/devel/lib/hello/hello_c"
-	cd /home/bingda/demo_ws/build/hello && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/hello_c.dir/link.txt --verbose=$(VERBOSE)
+/home/bingda/demo_ms/devel/lib/hello/hello_c: hello/CMakeFiles/hello_c.dir/src/hello_c.cpp.o
+/home/bingda/demo_ms/devel/lib/hello/hello_c: hello/CMakeFiles/hello_c.dir/build.make
+/home/bingda/demo_ms/devel/lib/hello/hello_c: /opt/ros/melodic/lib/libroscpp.so
+/home/bingda/demo_ms/devel/lib/hello/hello_c: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+/home/bingda/demo_ms/devel/lib/hello/hello_c: /opt/ros/melodic/lib/librosconsole.so
+/home/bingda/demo_ms/devel/lib/hello/hello_c: /opt/ros/melodic/lib/librosconsole_log4cxx.so
+/home/bingda/demo_ms/devel/lib/hello/hello_c: /opt/ros/melodic/lib/librosconsole_backend_interface.so
+/home/bingda/demo_ms/devel/lib/hello/hello_c: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
+/home/bingda/demo_ms/devel/lib/hello/hello_c: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+/home/bingda/demo_ms/devel/lib/hello/hello_c: /opt/ros/melodic/lib/libxmlrpcpp.so
+/home/bingda/demo_ms/devel/lib/hello/hello_c: /opt/ros/melodic/lib/libroscpp_serialization.so
+/home/bingda/demo_ms/devel/lib/hello/hello_c: /opt/ros/melodic/lib/librostime.so
+/home/bingda/demo_ms/devel/lib/hello/hello_c: /opt/ros/melodic/lib/libcpp_common.so
+/home/bingda/demo_ms/devel/lib/hello/hello_c: /usr/lib/x86_64-linux-gnu/libboost_system.so
+/home/bingda/demo_ms/devel/lib/hello/hello_c: /usr/lib/x86_64-linux-gnu/libboost_thread.so
+/home/bingda/demo_ms/devel/lib/hello/hello_c: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
+/home/bingda/demo_ms/devel/lib/hello/hello_c: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+/home/bingda/demo_ms/devel/lib/hello/hello_c: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
+/home/bingda/demo_ms/devel/lib/hello/hello_c: /usr/lib/x86_64-linux-gnu/libpthread.so
+/home/bingda/demo_ms/devel/lib/hello/hello_c: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
+/home/bingda/demo_ms/devel/lib/hello/hello_c: hello/CMakeFiles/hello_c.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bingda/demo_ms/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/bingda/demo_ms/devel/lib/hello/hello_c"
+	cd /home/bingda/demo_ms/build/hello && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/hello_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-hello/CMakeFiles/hello_c.dir/build: /home/bingda/demo_ws/devel/lib/hello/hello_c
+hello/CMakeFiles/hello_c.dir/build: /home/bingda/demo_ms/devel/lib/hello/hello_c
 
 .PHONY : hello/CMakeFiles/hello_c.dir/build
 
@@ -122,10 +122,10 @@ hello/CMakeFiles/hello_c.dir/requires: hello/CMakeFiles/hello_c.dir/src/hello_c.
 .PHONY : hello/CMakeFiles/hello_c.dir/requires
 
 hello/CMakeFiles/hello_c.dir/clean:
-	cd /home/bingda/demo_ws/build/hello && $(CMAKE_COMMAND) -P CMakeFiles/hello_c.dir/cmake_clean.cmake
+	cd /home/bingda/demo_ms/build/hello && $(CMAKE_COMMAND) -P CMakeFiles/hello_c.dir/cmake_clean.cmake
 .PHONY : hello/CMakeFiles/hello_c.dir/clean
 
 hello/CMakeFiles/hello_c.dir/depend:
-	cd /home/bingda/demo_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bingda/demo_ws/src /home/bingda/demo_ws/src/hello /home/bingda/demo_ws/build /home/bingda/demo_ws/build/hello /home/bingda/demo_ws/build/hello/CMakeFiles/hello_c.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/bingda/demo_ms/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bingda/demo_ms/src /home/bingda/demo_ms/src/hello /home/bingda/demo_ms/build /home/bingda/demo_ms/build/hello /home/bingda/demo_ms/build/hello/CMakeFiles/hello_c.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : hello/CMakeFiles/hello_c.dir/depend
 

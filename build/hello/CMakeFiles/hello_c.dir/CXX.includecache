@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/bingda/demo_ws/src/hello/src/hello_c.cpp
+/home/bingda/demo_ms/src/hello/src/hello_c.cpp
 ros/ros.h
-/home/bingda/demo_ws/src/hello/src/ros/ros.h
+/home/bingda/demo_ms/src/hello/src/ros/ros.h
 
 /opt/ros/melodic/include/ros/advertise_options.h
 ros/forwards.h

@@ -1,4 +1,4 @@
-prefix=/home/bingda/demo_ws/devel
+prefix=/home/bingda/demo_ms/devel
 
 Name: astrapro_launch
 Description: Description of astrapro_launch

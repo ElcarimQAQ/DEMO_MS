@@ -1,4 +1,4 @@
-prefix=/home/bingda/demo_ws/install
+prefix=/home/bingda/demo_ms/install
 
 Name: hello
 Description: Description of hello
