@@ -360,8 +360,8 @@ class BaseControl:
                 pass
             self.serial.write(output)
         except:
-            rospy.logerr("Get SN Command Send Faild")
-        self.serialIDLE_flag = 0  
+            rospy.logerr("Get SN Command Send Faild")  
+        self.serialIDLE_flag = 0   
     #get move base info
     def getInfo(self):
         #Get version info
