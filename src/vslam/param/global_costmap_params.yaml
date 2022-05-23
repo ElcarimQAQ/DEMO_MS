@@ -1,10 +1,11 @@
+# 全局代价地图
 global_costmap:
-  global_frame: map
-  robot_base_frame: base_footprint
-  update_frequency: 1.0
-  publish_frequency: 0.5
+  global_frame: map  #地图坐标系
+  robot_base_frame: base_footprint #小车坐标系
+  update_frequency: 1.0 #更新频率
+  publish_frequency: 0.5 #代价地图的发布频率
   # static_map: true 
-  transform_tolerance: 0.5
+  transform_tolerance: 0.5 #等待坐标变换发布信息的超时时间
   plugins:
     - {name: static_layer,            type: "costmap_2d::StaticLayer"}
     - {name: obstacle_layer,          type: "costmap_2d::VoxelLayer"}
