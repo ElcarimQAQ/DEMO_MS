@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bingda/demo_ws/src
+CMAKE_SOURCE_DIR = /home/bingda/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bingda/demo_ws/build
+CMAKE_BINARY_DIR = /home/bingda/catkin_ws/build
 
 # Utility rule file for _catkin_empty_exported_target.
 
@@ -63,10 +63,10 @@ astrapro_launch/CMakeFiles/_catkin_empty_exported_target.dir/build: _catkin_empt
 .PHONY : astrapro_launch/CMakeFiles/_catkin_empty_exported_target.dir/build
 
 astrapro_launch/CMakeFiles/_catkin_empty_exported_target.dir/clean:
-	cd /home/bingda/demo_ws/build/astrapro_launch && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
+	cd /home/bingda/catkin_ws/build/astrapro_launch && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
 .PHONY : astrapro_launch/CMakeFiles/_catkin_empty_exported_target.dir/clean
 
 astrapro_launch/CMakeFiles/_catkin_empty_exported_target.dir/depend:
-	cd /home/bingda/demo_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bingda/demo_ws/src /home/bingda/demo_ws/src/astrapro_launch /home/bingda/demo_ws/build /home/bingda/demo_ws/build/astrapro_launch /home/bingda/demo_ws/build/astrapro_launch/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/bingda/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bingda/catkin_ws/src /home/bingda/catkin_ws/src/astrapro_launch /home/bingda/catkin_ws/build /home/bingda/catkin_ws/build/astrapro_launch /home/bingda/catkin_ws/build/astrapro_launch/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : astrapro_launch/CMakeFiles/_catkin_empty_exported_target.dir/depend
 

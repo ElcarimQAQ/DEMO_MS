@@ -193,15 +193,15 @@ class BaseControl:
         return ret               
     #Subscribe vel_cmd call this to send vel cmd to move base
     def cmdCB(self,data):
+        # 取数据
         self.trans_x = data.linear.x
         self.trans_y = data.linear.y
         self.rotat_z = data.angular.z
         self.last_cmd_vel_time = rospy.Time.now()
-        output = chr(0x5a) + chr(12) + chr(0x01) + chr(0x01) + \
-            chr((int(self.trans_x*1000.0)>>8)&0xff) + chr(int(self.trans_x*1000.0)&0xff) + \
+        # 串口通信指令
+        output = chr(0x5a) + chr(12) + chr(0x01) + chr(0x01) + chr((int(self.trans_x*1000.0)>>8)&0xff) + chr(int(self.trans_x*1000.0)&0xff) + \
             chr((int(self.trans_y*1000.0)>>8)&0xff) + chr(int(self.trans_y*1000.0)&0xff) + \
-            chr((int(self.rotat_z*1000.0)>>8)&0xff) + chr(int(self.rotat_z*1000.0)&0xff) + \
-            chr(0x00)
+            chr((int(self.rotat_z*1000.0)>>8)&0xff) + chr(int(self.rotat_z*1000.0)&0xff) + chr(0x00)
         outputdata = [0x5a,0x0c,0x01,0x01,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00]
         outputdata[4] = (int(self.trans_x*1000.0)>>8)&0xff
         outputdata[5] = int(self.trans_x*1000.0)&0xff
@@ -211,8 +211,10 @@ class BaseControl:
         outputdata[9] = int(self.rotat_z*1000.0)&0xff
         crc_8 = self.crc_byte(outputdata,len(outputdata)-1)
         output += chr(crc_8)
+        # 串口没被占用，否则等待
         while self.serialIDLE_flag:
             time.sleep(0.01)
+        # 串口没被占用，加锁
         self.serialIDLE_flag = 4
         try:
             while self.serial.out_waiting:
@@ -220,6 +222,7 @@ class BaseControl:
             self.serial.write(output)
         except:
             rospy.logerr("Vel Command Send Faild")
+        # 释放锁
         self.serialIDLE_flag = 0
     
     #Communication Timer callback to handle receive data
@@ -395,21 +398,23 @@ class BaseControl:
         except:
             rospy.logerr("Odom Command Send Faild")
         self.serialIDLE_flag = 0   
-        #calculate odom data
+        #取x速度，y速度，角速度
         Vx = float(ctypes.c_int16(self.Vx).value/1000.0)
         Vy = float(ctypes.c_int16(self.Vy).value/1000.0)
         Vyaw = float(ctypes.c_int16(self.Vyaw).value/1000.0)
-
+        #Yawz角度
         self.pose_yaw = float(ctypes.c_int16(self.Yawz).value/100.0)
-        self.pose_yaw = self.pose_yaw*math.pi/180.0
+        self.pose_yaw = self.pose_yaw*math.pi/180.0 #转弧度
   
         self.current_time = rospy.Time.now()
-        dt = (self.current_time - self.previous_time).to_sec()
+        dt = (self.current_time - self.previous_time).to_sec() #走的时间
         self.previous_time = self.current_time
+        #分别计算x，y轴位移，对应轴上速度*时间
         self.pose_x = self.pose_x + Vx * (math.cos(self.pose_yaw))*dt - Vy * (math.sin(self.pose_yaw))*dt
         self.pose_y = self.pose_y + Vx * (math.sin(self.pose_yaw))*dt + Vy * (math.cos(self.pose_yaw))*dt
-
-        pose_quat = tf.transformations.quaternion_from_euler(0,0,self.pose_yaw)        
+        # Euler 转为 axis sequence.
+        pose_quat = tf.transformations.quaternion_from_euler(0,0,self.pose_yaw) 
+        # 赋值       
         msg = Odometry()
         msg.header.stamp = self.current_time
         msg.header.frame_id = self.odomId
@@ -424,7 +429,7 @@ class BaseControl:
         msg.twist.twist.linear.x = Vx
         msg.twist.twist.linear.y = Vy
         msg.twist.twist.angular.z = Vyaw
-        self.pub.publish(msg)
+        self.pub.publish(msg) #发布话题
         self.tf_broadcaster.sendTransform((self.pose_x,self.pose_y,0.0),pose_quat,self.current_time,self.baseId,self.odomId)
     #Battery Timer callback function to get battery info
     def timerBatteryCB(self,event):

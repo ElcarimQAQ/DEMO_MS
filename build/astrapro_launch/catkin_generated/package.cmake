@@ -1,6 +1,6 @@
 set(_CATKIN_CURRENT_PACKAGE "astrapro_launch")
 set(astrapro_launch_VERSION "1.0.0")
-set(astrapro_launch_MAINTAINER "Libing Yang <1067095308@qq.com>")
+set(astrapro_launch_MAINTAINER "FuZhi, Liu <liu.fuzhi@wechangetech.com>")
 set(astrapro_launch_PACKAGE_FORMAT "2")
 set(astrapro_launch_BUILD_DEPENDS )
 set(astrapro_launch_BUILD_EXPORT_DEPENDS )

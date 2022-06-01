@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /home/bingda/demo_ws/install/setup.sh
+    local-name: /home/bingda/catkin_ws/install/setup.sh

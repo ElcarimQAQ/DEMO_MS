@@ -1,25 +1,25 @@
 Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/bingda/demo_ws/build/CMakeFiles/CMakeTmp
+Change Dir: /home/bingda/catkin_ws/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_34d14/fast"
-/usr/bin/make -f CMakeFiles/cmTC_34d14.dir/build.make CMakeFiles/cmTC_34d14.dir/build
-make[1]: Entering directory '/home/bingda/demo_ws/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_34d14.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_34d14.dir/CheckSymbolExists.c.o   -c /home/bingda/demo_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_34d14
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_34d14.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_34d14.dir/CheckSymbolExists.c.o  -o cmTC_34d14 
-CMakeFiles/cmTC_34d14.dir/CheckSymbolExists.c.o: In function `main':
+Run Build Command:"/usr/bin/make" "cmTC_da13f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_da13f.dir/build.make CMakeFiles/cmTC_da13f.dir/build
+make[1]: Entering directory '/home/bingda/catkin_ws/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_da13f.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_da13f.dir/CheckSymbolExists.c.o   -c /home/bingda/catkin_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_da13f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_da13f.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_da13f.dir/CheckSymbolExists.c.o  -o cmTC_da13f 
+CMakeFiles/cmTC_da13f.dir/CheckSymbolExists.c.o: In function `main':
 CheckSymbolExists.c:(.text+0x14): undefined reference to `pthread_create'
 CheckSymbolExists.c:(.text+0x18): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_34d14.dir/build.make:97: recipe for target 'cmTC_34d14' failed
-make[1]: *** [cmTC_34d14] Error 1
-make[1]: Leaving directory '/home/bingda/demo_ws/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_34d14/fast' failed
-make: *** [cmTC_34d14/fast] Error 2
+CMakeFiles/cmTC_da13f.dir/build.make:97: recipe for target 'cmTC_da13f' failed
+make[1]: *** [cmTC_da13f] Error 1
+make[1]: Leaving directory '/home/bingda/catkin_ws/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_da13f/fast' failed
+make: *** [cmTC_da13f/fast] Error 2
 
-File /home/bingda/demo_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+File /home/bingda/catkin_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
 #include <pthread.h>
 
@@ -35,22 +35,22 @@ int main(int argc, char** argv)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/bingda/demo_ws/build/CMakeFiles/CMakeTmp
+Change Dir: /home/bingda/catkin_ws/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_18e32/fast"
-/usr/bin/make -f CMakeFiles/cmTC_18e32.dir/build.make CMakeFiles/cmTC_18e32.dir/build
-make[1]: Entering directory '/home/bingda/demo_ws/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_18e32.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_18e32.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
-Linking C executable cmTC_18e32
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_18e32.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_18e32.dir/CheckFunctionExists.c.o  -o cmTC_18e32 -lpthreads 
+Run Build Command:"/usr/bin/make" "cmTC_fb9a9/fast"
+/usr/bin/make -f CMakeFiles/cmTC_fb9a9.dir/build.make CMakeFiles/cmTC_fb9a9.dir/build
+make[1]: Entering directory '/home/bingda/catkin_ws/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_fb9a9.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_fb9a9.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_fb9a9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fb9a9.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_fb9a9.dir/CheckFunctionExists.c.o  -o cmTC_fb9a9 -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_18e32.dir/build.make:97: recipe for target 'cmTC_18e32' failed
-make[1]: *** [cmTC_18e32] Error 1
-make[1]: Leaving directory '/home/bingda/demo_ws/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_18e32/fast' failed
-make: *** [cmTC_18e32/fast] Error 2
+CMakeFiles/cmTC_fb9a9.dir/build.make:97: recipe for target 'cmTC_fb9a9' failed
+make[1]: *** [cmTC_fb9a9] Error 1
+make[1]: Leaving directory '/home/bingda/catkin_ws/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_fb9a9/fast' failed
+make: *** [cmTC_fb9a9/fast] Error 2
 
 

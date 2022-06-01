@@ -7,4 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export PWD='/home/bingda/demo_ws/build'
+export PWD='/home/bingda/catkin_ws/build'

@@ -1,4 +1,4 @@
-prefix=/home/bingda/demo_ws/install
+prefix=/home/bingda/catkin_ws/install
 
 Name: astrapro_launch
 Description: Description of astrapro_launch
