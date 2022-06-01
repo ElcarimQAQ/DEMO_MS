@@ -1,8 +1,8 @@
-# Install script for directory: /home/bingda/demo_ws/src/base_control
+# Install script for directory: /home/bingda/demo_ms/src/base_control
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/bingda/demo_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/bingda/demo_ms/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/bingda/demo_ws/build/base_control/catkin_generated/installspace/base_control.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/bingda/demo_ms/build/base_control/catkin_generated/installspace/base_control.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_control/cmake" TYPE FILE FILES
-    "/home/bingda/demo_ws/build/base_control/catkin_generated/installspace/base_controlConfig.cmake"
-    "/home/bingda/demo_ws/build/base_control/catkin_generated/installspace/base_controlConfig-version.cmake"
+    "/home/bingda/demo_ms/build/base_control/catkin_generated/installspace/base_controlConfig.cmake"
+    "/home/bingda/demo_ms/build/base_control/catkin_generated/installspace/base_controlConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_control" TYPE FILE FILES "/home/bingda/demo_ws/src/base_control/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_control" TYPE FILE FILES "/home/bingda/demo_ms/src/base_control/package.xml")
 endif()
 

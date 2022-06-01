@@ -67,14 +67,14 @@ set(base_control_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(base_control_SOURCE_PREFIX /home/bingda/demo_ws/src/base_control)
-  set(base_control_DEVEL_PREFIX /home/bingda/demo_ws/devel)
+  set(base_control_SOURCE_PREFIX /home/bingda/demo_ms/src/base_control)
+  set(base_control_DEVEL_PREFIX /home/bingda/demo_ms/devel)
   set(base_control_INSTALL_PREFIX "")
   set(base_control_PREFIX ${base_control_DEVEL_PREFIX})
 else()
   set(base_control_SOURCE_PREFIX "")
   set(base_control_DEVEL_PREFIX "")
-  set(base_control_INSTALL_PREFIX /home/bingda/demo_ws/install)
+  set(base_control_INSTALL_PREFIX /home/bingda/demo_ms/install)
   set(base_control_PREFIX ${base_control_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/bingda/demo_ws/install/lib;/home/bingda/demo_ws/devel/lib;/home/bingda/catkin_ws/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/bingda/demo_ms/install/lib;/home/bingda/catkin_ws/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

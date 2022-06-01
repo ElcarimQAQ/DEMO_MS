@@ -1,8 +1,8 @@
-# Install script for directory: /home/bingda/demo_ws/src/astrapro_launch
+# Install script for directory: /home/bingda/demo_ms/src/astrapro_launch
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/bingda/demo_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/bingda/demo_ms/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/bingda/demo_ws/build/astrapro_launch/catkin_generated/installspace/astrapro_launch.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/bingda/demo_ms/build/astrapro_launch/catkin_generated/installspace/astrapro_launch.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/astrapro_launch/cmake" TYPE FILE FILES
-    "/home/bingda/demo_ws/build/astrapro_launch/catkin_generated/installspace/astrapro_launchConfig.cmake"
-    "/home/bingda/demo_ws/build/astrapro_launch/catkin_generated/installspace/astrapro_launchConfig-version.cmake"
+    "/home/bingda/demo_ms/build/astrapro_launch/catkin_generated/installspace/astrapro_launchConfig.cmake"
+    "/home/bingda/demo_ms/build/astrapro_launch/catkin_generated/installspace/astrapro_launchConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/astrapro_launch" TYPE FILE FILES "/home/bingda/demo_ws/src/astrapro_launch/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/astrapro_launch" TYPE FILE FILES "/home/bingda/demo_ms/src/astrapro_launch/package.xml")
 endif()
 

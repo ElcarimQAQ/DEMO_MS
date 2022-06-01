@@ -1,8 +1,8 @@
-# Install script for directory: /home/bingda/demo_ws/src/pub_sub
+# Install script for directory: /home/bingda/demo_ms/src/pub_sub
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/bingda/demo_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/bingda/demo_ms/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,25 +38,25 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/bingda/demo_ws/build/pub_sub/catkin_generated/installspace/pub_sub.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/bingda/demo_ms/build/pub_sub/catkin_generated/installspace/pub_sub.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pub_sub/cmake" TYPE FILE FILES
-    "/home/bingda/demo_ws/build/pub_sub/catkin_generated/installspace/pub_subConfig.cmake"
-    "/home/bingda/demo_ws/build/pub_sub/catkin_generated/installspace/pub_subConfig-version.cmake"
+    "/home/bingda/demo_ms/build/pub_sub/catkin_generated/installspace/pub_subConfig.cmake"
+    "/home/bingda/demo_ms/build/pub_sub/catkin_generated/installspace/pub_subConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pub_sub" TYPE FILE FILES "/home/bingda/demo_ws/src/pub_sub/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pub_sub" TYPE FILE FILES "/home/bingda/demo_ms/src/pub_sub/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pub_sub" TYPE PROGRAM FILES "/home/bingda/demo_ws/build/pub_sub/catkin_generated/installspace/pub01_p.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pub_sub" TYPE PROGRAM FILES "/home/bingda/demo_ms/build/pub_sub/catkin_generated/installspace/pub01_p.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pub_sub" TYPE PROGRAM FILES "/home/bingda/demo_ws/build/pub_sub/catkin_generated/installspace/sub01_p.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pub_sub" TYPE PROGRAM FILES "/home/bingda/demo_ms/build/pub_sub/catkin_generated/installspace/sub01_p.py")
 endif()
 

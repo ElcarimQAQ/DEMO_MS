@@ -1,4 +1,7 @@
-# base_control
+Reference:  
+底盘控制：https://www.cnblogs.com/jiangyiming/p/16102577.html
+
+# base_control给定的通讯协议
 Car move chasssis control package
 
 //////////////////////

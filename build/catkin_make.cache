@@ -1,2 +1,2 @@
-astrapro_launch:base_control:hello:pub_sub:robot_navigation:ros_astra_camera:vslam
--DCATKIN_DEVEL_PREFIX=/home/bingda/demo_ws/devel -DCMAKE_INSTALL_PREFIX=/home/bingda/demo_ws/install -G Unix Makefiles
+astrapro_launch:base_control:hello:pub_sub:voice:vslam
+-DCATKIN_DEVEL_PREFIX=/home/bingda/demo_ms/devel -DCMAKE_INSTALL_PREFIX=/home/bingda/demo_ms/install -G Unix Makefiles

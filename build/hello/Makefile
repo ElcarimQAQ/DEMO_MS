@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bingda/demo_ws/src
+CMAKE_SOURCE_DIR = /home/bingda/demo_ms/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bingda/demo_ws/build
+CMAKE_BINARY_DIR = /home/bingda/demo_ms/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,14 +137,14 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/bingda/demo_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/bingda/demo_ws/build/CMakeFiles /home/bingda/demo_ws/build/hello/CMakeFiles/progress.marks
-	cd /home/bingda/demo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 hello/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bingda/demo_ws/build/CMakeFiles 0
+	cd /home/bingda/demo_ms/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/bingda/demo_ms/build/CMakeFiles /home/bingda/demo_ms/build/hello/CMakeFiles/progress.marks
+	cd /home/bingda/demo_ms/build && $(MAKE) -f CMakeFiles/Makefile2 hello/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bingda/demo_ms/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/bingda/demo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 hello/clean
+	cd /home/bingda/demo_ms/build && $(MAKE) -f CMakeFiles/Makefile2 hello/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/bingda/demo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 hello/preinstall
+	cd /home/bingda/demo_ms/build && $(MAKE) -f CMakeFiles/Makefile2 hello/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/bingda/demo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 hello/preinstall
+	cd /home/bingda/demo_ms/build && $(MAKE) -f CMakeFiles/Makefile2 hello/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/bingda/demo_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/bingda/demo_ms/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 hello/CMakeFiles/hello_c.dir/rule:
-	cd /home/bingda/demo_ws/build && $(MAKE) -f CMakeFiles/Makefile2 hello/CMakeFiles/hello_c.dir/rule
+	cd /home/bingda/demo_ms/build && $(MAKE) -f CMakeFiles/Makefile2 hello/CMakeFiles/hello_c.dir/rule
 .PHONY : hello/CMakeFiles/hello_c.dir/rule
 
 # Convenience name for target.
@@ -179,7 +179,7 @@ hello_c: hello/CMakeFiles/hello_c.dir/rule
 
 # fast build rule for target.
 hello_c/fast:
-	cd /home/bingda/demo_ws/build && $(MAKE) -f hello/CMakeFiles/hello_c.dir/build.make hello/CMakeFiles/hello_c.dir/build
+	cd /home/bingda/demo_ms/build && $(MAKE) -f hello/CMakeFiles/hello_c.dir/build.make hello/CMakeFiles/hello_c.dir/build
 .PHONY : hello_c/fast
 
 src/hello_c.o: src/hello_c.cpp.o
@@ -188,7 +188,7 @@ src/hello_c.o: src/hello_c.cpp.o
 
 # target to build an object file
 src/hello_c.cpp.o:
-	cd /home/bingda/demo_ws/build && $(MAKE) -f hello/CMakeFiles/hello_c.dir/build.make hello/CMakeFiles/hello_c.dir/src/hello_c.cpp.o
+	cd /home/bingda/demo_ms/build && $(MAKE) -f hello/CMakeFiles/hello_c.dir/build.make hello/CMakeFiles/hello_c.dir/src/hello_c.cpp.o
 .PHONY : src/hello_c.cpp.o
 
 src/hello_c.i: src/hello_c.cpp.i
@@ -197,7 +197,7 @@ src/hello_c.i: src/hello_c.cpp.i
 
 # target to preprocess a source file
 src/hello_c.cpp.i:
-	cd /home/bingda/demo_ws/build && $(MAKE) -f hello/CMakeFiles/hello_c.dir/build.make hello/CMakeFiles/hello_c.dir/src/hello_c.cpp.i
+	cd /home/bingda/demo_ms/build && $(MAKE) -f hello/CMakeFiles/hello_c.dir/build.make hello/CMakeFiles/hello_c.dir/src/hello_c.cpp.i
 .PHONY : src/hello_c.cpp.i
 
 src/hello_c.s: src/hello_c.cpp.s
@@ -206,7 +206,7 @@ src/hello_c.s: src/hello_c.cpp.s
 
 # target to generate assembly for a file
 src/hello_c.cpp.s:
-	cd /home/bingda/demo_ws/build && $(MAKE) -f hello/CMakeFiles/hello_c.dir/build.make hello/CMakeFiles/hello_c.dir/src/hello_c.cpp.s
+	cd /home/bingda/demo_ms/build && $(MAKE) -f hello/CMakeFiles/hello_c.dir/build.make hello/CMakeFiles/hello_c.dir/src/hello_c.cpp.s
 .PHONY : src/hello_c.cpp.s
 
 # Help Target
@@ -237,6 +237,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/bingda/demo_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/bingda/demo_ms/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

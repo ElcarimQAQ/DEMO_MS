@@ -1,5 +1,5 @@
 #!/usr/bin/python
-# coding=gbk
+# coding=utf-8
 
 import os
 import rospy
@@ -124,7 +124,7 @@ class BaseControl:
         self.motor_type = ["25GA370","37GB520","TT48","RS365","RS540"]
         self.last_cmd_vel_time = rospy.Time.now()
         self.last_ackermann_cmd_time = rospy.Time.now()
-        # Serial Communication
+        # 串口通讯
         try:
             self.serial = serial.Serial(self.device_port,self.baudrate,timeout=10)
             rospy.loginfo("Opening Serial")
@@ -136,13 +136,16 @@ class BaseControl:
                 pass
         except:
             rospy.logerr("Can not open Serial"+self.device_port)
-            self.serial.close
-            sys.exit(0)
+            #self.serial.close
+            # sys.exit(0)
         rospy.loginfo("Serial Open Succeed")
-        #sub cmd_vel topic
+        # 接受 cmd_vel topic，速度指令
         self.sub = rospy.Subscriber(self.cmd_vel_topic,Twist,self.cmdCB,queue_size=20)
+        # 发布里程计
         self.pub = rospy.Publisher(self.odom_topic,Odometry,queue_size=10)
+        # 发布电量
         self.battery_pub = rospy.Publisher(self.battery_topic,BatteryState,queue_size=3)
+        # 发布超声波
         if self.pub_sonar:
             if sonar_num > 0:
                 self.timer_sonar = rospy.Timer(rospy.Duration(100.0/1000),self.timerSonarCB)
