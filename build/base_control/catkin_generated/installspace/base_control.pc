@@ -1,8 +1,0 @@
-prefix=/home/bingda/demo_ms/install
-
-Name: base_control
-Description: Description of base_control
-Version: 1.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
